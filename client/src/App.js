@@ -9,6 +9,8 @@ function App() {
       <Routes>
         <Route exact path="/citizensUpload" element={<CitizensUploadPage />}></Route>
         <Route exact path="/sendFloodMsg" element={<SendFloodMsgPage />}></Route>
+        <Route exact path="/districtLogin" element={<SendFloodMsgPage />}></Route>
+        <Route exact path="/govLogin" element={<SendFloodMsgPage />}></Route>
         <Route
           path="*"
           element={<Navigate to="/sendFloodMsg" replace />}
