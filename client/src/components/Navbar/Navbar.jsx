@@ -2,28 +2,33 @@
 import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import {
-  BookmarkAltIcon,
   CalendarIcon,
-  ChartBarIcon,
   CursorClickIcon,
   MenuIcon,
-  PhoneIcon,
   PlayIcon,
-  RefreshIcon,
   ShieldCheckIcon,
-  SupportIcon,
-  ViewGridIcon,
   XIcon,
 } from "@heroicons/react/outline";
+import { HiOfficeBuilding } from "react-icons/hi";
+import { WiFlood } from "react-icons/wi";
+import { BiHelpCircle } from "react-icons/bi";
+import {
+  RiGuideFill,
+  RiMessage3Line,
+  RiCoinsLine,
+  RiEditCircleLine
+} from "react-icons/ri";
+import { MdAccessibility } from "react-icons/md";
+import { AiOutlineFileUnknown } from "react-icons/ai";
 import { ChevronDownIcon } from "@heroicons/react/solid";
 
-const solutions = [
+const informations = [
   {
-    name: "Analytics",
+    name: "Ministry Of Jal Sakti",
     description:
-      "Get a better understanding of where your traffic is coming from.",
-    href: "#",
-    icon: ChartBarIcon,
+      "Refer the website for the updates about flood situation maintained by Govt. of India",
+    href: " http://jalshakti-dowr.gov.in/",
+    icon: HiOfficeBuilding,
   },
   {
     name: "Engagement",
@@ -38,57 +43,75 @@ const solutions = [
     icon: ShieldCheckIcon,
   },
   {
-    name: "Integrations",
-    description: "Connect with third-party tools that you're already using.",
+    name: "Circulations",
+    description: "Show interst to circulate the important messages to whom has not yet got the information",
     href: "#",
-    icon: ViewGridIcon,
+    icon: RiEditCircleLine,
   },
   {
-    name: "Automations",
+    name: "Messaging System ",
     description:
-      "Build strategic funnels that will drive your customers to convert",
+      "Messaging the formation to the people who are affected to it or going to be",
     href: "#",
-    icon: RefreshIcon,
+    icon: RiMessage3Line,
   },
 ];
 const callsToAction = [
-  { name: "Watch Demo", href: "#", icon: PlayIcon },
-  { name: "Contact Sales", href: "#", icon: PhoneIcon },
+  { name: "See tutorial", href: "#", icon: PlayIcon },
+  { name: "Feedback", href: "#", icon: MdAccessibility },
 ];
+const operations = [
+  {
+    name: "Operations",
+    description:
+      "See what we do and deep dive to the entire process of serving our people",
+    href: "#",
+    icon: AiOutlineFileUnknown,
+  },
+  {
+    name: "Contribute",
+    description:
+      "Conribute to as per you to make ur nation safe",
+    href: "#",
+    icon: RiCoinsLine,
+  },
+]
 const resources = [
+  {
+    name: "Flood Forecast",
+    description:
+      "Get all of your questions answered in our forums or contact support.",
+    href: "http://ffs.tamcnhp.com/",
+    icon: WiFlood,
+  },
   {
     name: "Help Center",
     description:
-      "Get all of your questions answered in our forums or contact support.",
-    href: "#",
-    icon: SupportIcon,
+      "See what meet-ups and other events we might be planning near you.",
+    href: "https://nidm.gov.in/",
+    icon: BiHelpCircle,
   },
   {
     name: "Guides",
     description:
       "Learn how to maximize our platform to get the most out of it.",
     href: "#",
-    icon: BookmarkAltIcon,
+    icon: RiGuideFill,
   },
   {
     name: "Events",
     description:
       "See what meet-ups and other events we might be planning near you.",
-    href: "#",
+    href: "https://ndmindia.mha.gov.in/",
     icon: CalendarIcon,
   },
-  {
-    name: "Security",
-    description: "Understand how we take your privacy seriously.",
-    href: "#",
-    icon: ShieldCheckIcon,
-  },
+
 ];
 const recentPosts = [
-  { id: 1, name: "Boost your conversion rate", href: "#" },
+  { id: 1, name: "Red aleart area near me", href: "#" },
   {
     id: 2,
-    name: "How to use search engine optimization to drive traffic to your site",
+    name: "How to contact to the help center ",
     href: "#",
   },
   { id: 3, name: "Improve your customer experience", href: "#" },
@@ -128,14 +151,14 @@ export default function Example() {
                   <Popover.Button
                     className={classNames(
                       open ? "text-gray-900" : "text-gray-500",
-                      "group bg-gray-100 rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                      "group bg-white px-2 py-2  rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                     )}
                   >
-                    <span>Solutions</span>
+                    <span>Informations</span>
                     <ChevronDownIcon
                       className={classNames(
                         open ? "text-gray-600" : "text-gray-400",
-                        "ml-2 h-5 w-5 group-hover:text-gray-500"
+                        "ml-1 h-5 w-5 group-hover:text-gray-500"
                       )}
                       aria-hidden="true"
                     />
@@ -150,14 +173,14 @@ export default function Example() {
                     leaveFrom="opacity-100 translate-y-0"
                     leaveTo="opacity-0 translate-y-1"
                   >
-                    <Popover.Panel className="absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
+                    <Popover.Panel className="absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-xl sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
                       <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                         <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
-                          {solutions.map((item) => (
+                          {informations.map((item) => (
                             <a
                               key={item.name}
                               href={item.href}
-                              className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
+                              className="-m-3 px-3 py-1 flex items-start rounded-lg hover:bg-gray-50"
                             >
                               <item.icon
                                 className="flex-shrink-0 h-6 w-6 text-indigo-600"
@@ -199,15 +222,15 @@ export default function Example() {
 
             <a
               href="#"
-              className="text-base font-medium text-gray-500 hover:text-gray-900"
+              className="text-base my-2 font-medium text-gray-500 hover:text-gray-900"
             >
-              Pricing
+              Operations
             </a>
             <a
               href="#"
-              className="text-base font-medium text-gray-500 hover:text-gray-900"
+              className="text-base my-2 font-medium text-gray-500 hover:text-gray-900"
             >
-              Docs
+              Contribute
             </a>
 
             <Popover className="relative">
@@ -216,7 +239,7 @@ export default function Example() {
                   <Popover.Button
                     className={classNames(
                       open ? "text-gray-900" : "text-gray-500",
-                      "group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                      "group bg-white px-2 py-2 rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                     )}
                   >
                     <span>More</span>
@@ -238,14 +261,14 @@ export default function Example() {
                     leaveFrom="opacity-100 translate-y-0"
                     leaveTo="opacity-0 translate-y-1"
                   >
-                    <Popover.Panel className="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 px-2 w-screen max-w-md sm:px-0">
+                    <Popover.Panel className="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 px-2 w-screen max-w-xl sm:px-0">
                       <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                         <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
                           {resources.map((item) => (
                             <a
                               key={item.name}
                               href={item.href}
-                              className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
+                              className="-m-3 px-3 py-1 flex items-start rounded-lg hover:bg-gray-50"
                             >
                               <item.icon
                                 className="flex-shrink-0 h-6 w-6 text-indigo-600"
@@ -262,9 +285,9 @@ export default function Example() {
                             </a>
                           ))}
                         </div>
-                        <div className="px-5 py-5 bg-gray-50 sm:px-8 sm:py-8">
+                        <div className="px-5 bg-gray-50 sm:px-8 sm:py-8">
                           <div>
-                            <h3 className="text-base font-medium text-gray-500">
+                            <h3 className="text-base font-medium text-blue-800">
                               Recent Posts
                             </h3>
                             <ul role="list" className="mt-4 space-y-4">
@@ -289,7 +312,7 @@ export default function Example() {
                               className="font-medium text-indigo-600 hover:text-indigo-500"
                             >
                               {" "}
-                              View all posts{" "}
+                              See all{" "}
                               <span aria-hidden="true">&rarr;</span>
                             </a>
                           </div>
@@ -302,18 +325,18 @@ export default function Example() {
             </Popover>
           </Popover.Group>
           <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-            <a
+            <button
               href="#"
-              className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"
+              className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border-2 border-indigo-600 border-transparent rounded-md shadow-sm text-base text-slate-400 font-bold hover:text-white hover:bg-indigo-700 ease-in duration-200"
             >
-              Sign in
-            </a>
-            <a
+              GovtLogin
+            </button>
+            <button
               href="#"
-              className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
+              className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 mr-6 border bg-indigo-600 border-transparent rounded-md shadow-sm text-base text-white font-medium hover:bg-indigo-700"
             >
-              Sign up
-            </a>
+              DistLogin
+            </button>
           </div>
         </div>
       </div>
@@ -334,12 +357,8 @@ export default function Example() {
           <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
             <div className="pt-5 pb-6 px-5">
               <div className="flex items-center justify-between">
-                <div>
-                  <img
-                    className="h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/workflow-mark.svg?color=indigo&shade=600"
-                    alt="Workflow"
-                  />
+                <div className="text-2xl font-extrabold text-blue-800">
+                  FLOCAST
                 </div>
                 <div className="-mr-2">
                   <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
@@ -350,11 +369,11 @@ export default function Example() {
               </div>
               <div className="mt-6">
                 <nav className="grid gap-y-8">
-                  {solutions.map((item) => (
+                  {informations.map((item) => (
                     <a
                       key={item.name}
                       href={item.href}
-                      className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
+                      className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-100"
                     >
                       <item.icon
                         className="flex-shrink-0 h-6 w-6 text-indigo-600"
@@ -369,45 +388,58 @@ export default function Example() {
               </div>
             </div>
             <div className="py-6 px-5 space-y-6">
+              <div className="grid grid-cols-2 gap-x-8">
+                {operations.map((item) => (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-100"
+                  >
+                    <item.icon
+                      className="flex-shrink-0 h-6 w-6 text-indigo-600"
+                      aria-hidden="true"
+                    />
+                    <span className="ml-3 text-base font-medium text-gray-900">
+                      {item.name}
+                    </span>
+                  </a>
+                ))}
+              </div>
+            </div>
+            <div className="py-6 px-5 space-y-6">
               <div className="grid grid-cols-2 gap-y-4 gap-x-8">
-                <a
-                  href="#"
-                  className="text-base font-medium text-gray-900 hover:text-gray-700"
-                >
-                  Pricing
-                </a>
-
-                <a
-                  href="#"
-                  className="text-base font-medium text-gray-900 hover:text-gray-700"
-                >
-                  Docs
-                </a>
                 {resources.map((item) => (
                   <a
                     key={item.name}
                     href={item.href}
-                    className="text-base font-medium text-gray-900 hover:text-gray-700"
+                    className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-100"
                   >
-                    {item.name}
+                    <item.icon
+                      className="flex-shrink-0 h-6 w-6 text-indigo-600"
+                      aria-hidden="true"
+                    />
+                    <span className="ml-3 text-base font-medium text-gray-900">
+                      {item.name}
+                    </span>
                   </a>
                 ))}
               </div>
-              <div>
-                <a
+              <div className="space-y-2">
+                <button
                   href="#"
-                  className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
+                  className="w-full whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border-2 border-indigo-600 border-transparent rounded-md shadow-sm text-base text-slate-400 font-bold hover:text-white hover:bg-indigo-700 ease-in duration-200"
                 >
-                  Sign up
-                </a>
-                <p className="mt-6 text-center text-base font-medium text-gray-500">
-                  Existing customer?{" "}
-                  <a href="#" className="text-indigo-600 hover:text-indigo-500">
-                    Sign in
-                  </a>
-                </p>
+                  GovtLogin
+                </button>
+                <button
+                  href="#"
+                  className="w-full whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border bg-indigo-600 border-transparent rounded-md shadow-sm text-base text-white font-medium hover:bg-indigo-700"
+                >
+                  DistLogin
+                </button>
               </div>
             </div>
+
           </div>
         </Popover.Panel>
       </Transition>
