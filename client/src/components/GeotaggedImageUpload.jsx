@@ -63,7 +63,7 @@ const GeotaggedImageUpload = () => {
               <Camera
                 onTakePhotoAnimationDone={handleTakePhotoAnimationDone}
                 // isFullscreen={true}
-                idealFacingMode={FACING_MODES.USER}
+                // idealFacingMode={FACING_MODES.USER}
               />
             </div>
           )}
