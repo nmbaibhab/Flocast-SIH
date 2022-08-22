@@ -14,10 +14,10 @@ function App() {
         <Route exact path="/sendFloodMsg" element={<SendFloodMsgPage />}></Route>
         <Route exact path="/distLogin" element={<DistLoginPage />}></Route>
         <Route exact path="/govLogin" element={<GovLoginPage />}></Route>
-        <Route exact path="/Imgupload" element={<GeoImageUploadPage />}></Route>
+        <Route exact path="/imgUpload" element={<GeoImageUploadPage />}></Route>
         <Route
           path="*"
-          element={<Navigate to="/sendFloodMsg" replace />}
+          element={<Navigate to="/imgUpload" replace />}
         />
       </Routes>
     </BrowserRouter>
