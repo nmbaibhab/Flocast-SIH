@@ -2,11 +2,14 @@ import React, { useEffect, useState } from "react";
 import Camera, { FACING_MODES, IMAGE_TYPES } from "react-html5-camera-photo";
 import "react-html5-camera-photo/build/css/index.css";
 // import ImagePreview from "./ImagePreview";
+import { TbCameraRotate } from "react-icons/tb";
 
 const GeotaggedImageUpload = () => {
   //getting user coordinates
   const [lat, setLat] = useState(null);
   const [long, setLong] = useState(null);
+  const [imgData, setImgData] = useState(null);
+  const [facingMode, setFacingMode] = useState(FACING_MODES.ENVIROMENT);
   const geolocationAPI = navigator.geolocation;
 
   const getUserCoordinates = () => {
@@ -31,13 +34,17 @@ const GeotaggedImageUpload = () => {
   }, []);
 
   //getting user images
-  const [imgData, setImgData] = useState(null);
 
   const handleTakePhotoAnimationDone = (dataUri) => {
-    console.log("takePhoto");
+    // console.log("takePhoto");
     setImgData(dataUri);
   };
-  console.log("takePhoto", imgData);
+  //   console.log("takePhoto", imgData);
+  const rotateCamera = () => {
+    if (facingMode === FACING_MODES.ENVIROMENT)
+      setFacingMode(FACING_MODES.USER);
+    else setFacingMode(FACING_MODES.ENVIROMENT);
+  };
 
   return (
     <>
@@ -59,11 +66,15 @@ const GeotaggedImageUpload = () => {
               />
             </div>
           ) : (
-            <div className="mx-auto items-center justify-center border-2 border-amber-500">
+            <div className="mx-auto items-center justify-center border-2 border-amber-500 relative cursor-pointer">
               <Camera
                 onTakePhotoAnimationDone={handleTakePhotoAnimationDone}
                 // isFullscreen={true}
-                // idealFacingMode={FACING_MODES.USER}
+                idealFacingMode={facingMode}
+              />
+              <TbCameraRotate
+                className="text-5xl absolute bottom-7 ml-10 text-white "
+                onClick={rotateCamera}
               />
             </div>
           )}
