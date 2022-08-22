@@ -50,6 +50,7 @@ export default function Example() {
                   )}
                 </Disclosure.Button>
               </div>
+
               <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex-shrink-0 flex items-center">
                   <img
@@ -63,7 +64,7 @@ export default function Example() {
                     alt="Workflow"
                   />
                   <span className="text-xl font-extrabold text-blue-100 mx-2">
-                    FLOCAST
+                    <Link to="/">FLOCAST</Link>
                   </span>
                 </div>
 
@@ -91,11 +92,12 @@ export default function Example() {
                   </div>
                 </div>
               </div>
+
               <div className=" absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                <button className="invisible md:visible ml-6 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border bg-blue-700 border-transparent rounded-md shadow-sm text-sm text-white font-medium hover:bg-blue-900">
+                <button className="invisible md:visible ml-6 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border bg-blue-700 border-transparent rounded-md shadow-sm text-sm text-white font-medium hover:bg-blue-800">
                   <Link to="/distLogin">Dist Login</Link>
                 </button>
-                <button className="invisible md:visible ml-6 whitespace-nowrap inline-flex items-center justify-center px-4 py-2  border bg-green-600 border-transparent rounded-md shadow-sm text-sm text-white font-medium hover:bg-green-900">
+                <button className="invisible md:visible ml-6 whitespace-nowrap inline-flex items-center justify-center px-4 py-2  border bg-green-500 border-transparent rounded-md shadow-sm text-sm text-white font-medium hover:bg-green-700">
                   <Link to="/govLogin">Gov Login</Link>
                 </button>
                 {/* <button
@@ -200,7 +202,7 @@ export default function Example() {
               </button>
               <button
                 href="#"
-                className=" mx-1 whitespace-nowrap inline-flex items-center justify-center px-2 py-2  border bg-green-600 border-transparent rounded-md shadow-sm text-sm text-white font-sm hover:bg-pink-500"
+                className=" mx-1 whitespace-nowrap inline-flex items-center justify-center px-2 py-2  border bg-green-500 border-transparent rounded-md shadow-sm text-sm text-white font-sm hover:bg-pink-500"
               >
                 Gov Login
               </button>

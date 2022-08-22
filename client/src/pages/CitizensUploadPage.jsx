@@ -6,7 +6,6 @@ const CitizensUploadPage = () => {
   return (
     <div>
       <Navbar />
-
       <CitizensUpload />
     </div>
   );
