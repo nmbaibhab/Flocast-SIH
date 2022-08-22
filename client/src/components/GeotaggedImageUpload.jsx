@@ -9,7 +9,7 @@ const GeotaggedImageUpload = () => {
   const [lat, setLat] = useState(null);
   const [long, setLong] = useState(null);
   const [imgData, setImgData] = useState(null);
-  const [facingMode, setFacingMode] = useState(FACING_MODES.ENVIROMENT);
+  const [facingMode, setFacingMode] = useState(FACING_MODES.ENVIRONMENT);
   const geolocationAPI = navigator.geolocation;
 
   const getUserCoordinates = () => {
@@ -41,9 +41,10 @@ const GeotaggedImageUpload = () => {
   };
   //   console.log("takePhoto", imgData);
   const rotateCamera = () => {
-    if (facingMode === FACING_MODES.ENVIROMENT)
+    if (facingMode === FACING_MODES.ENVIRONMENT)
       setFacingMode(FACING_MODES.USER);
-    else setFacingMode(FACING_MODES.ENVIROMENT);
+    else setFacingMode(FACING_MODES.ENVIRONMENT);
+    // console.log(facingMode);
   };
 
   return (
