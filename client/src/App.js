@@ -4,6 +4,7 @@ import CitizensUploadPage from './pages/CitizensUploadPage';
 import SendFloodMsgPage from './pages/SendFloodMsgPage';
 import DistLoginPage from './pages/DistLoginPage';
 import GovLoginPage from './pages/GovLoginPage';
+import GeoImageUploadPage from "./pages/GeoImageUploadPage";
 
 function App() {
   return (
@@ -13,9 +14,10 @@ function App() {
         <Route exact path="/sendFloodMsg" element={<SendFloodMsgPage />}></Route>
         <Route exact path="/distLogin" element={<DistLoginPage />}></Route>
         <Route exact path="/govLogin" element={<GovLoginPage />}></Route>
+        <Route exact path="/Imgupload" element={<GeoImageUploadPage />}></Route>
         <Route
           path="*"
-          element={<Navigate to="/citizensUpload" replace />}
+          element={<Navigate to="/Imgupload" replace />}
         />
       </Routes>
     </BrowserRouter>
