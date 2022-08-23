@@ -36,7 +36,11 @@ exports.login = async (req, res, next) => {
 // @desc    Register user
 exports.register = async (req, res, next) => {
   const { username, email, password } = req.body;
-
+  const userEmail = await User.findOne({ email });
+  const userName = await User.findOne({ username });
+  if (userEmail || userName) {
+    return next(new ErrorResponse("Username or Email Already Exists", 402));
+  }
   try {
     const user = await User.create({
       username,
@@ -136,5 +140,6 @@ exports.resetPassword = async (req, res, next) => {
 
 const sendToken = (user, statusCode, res) => {
   const token = user.getSignedJwtToken();
-  res.status(statusCode).json({ sucess: true, token });
+  // console.log(user);
+  res.status(statusCode).json({ sucess: true, token, username: user.username, userID: user._id });
 };
