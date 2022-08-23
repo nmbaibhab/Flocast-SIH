@@ -17,7 +17,7 @@ function App() {
         <Route exact path="/imgUpload" element={<GeoImageUploadPage />}></Route>
         <Route
           path="*"
-          element={<Navigate to="/imgUpload" replace />}
+          element={<Navigate to="/sendFloodMsg" replace />}
         />
       </Routes>
     </BrowserRouter>
