@@ -8,10 +8,17 @@ const errorHandler = require("./middleware/error");
 connectDB();
 
 app.use(cors());
-app.use(express.json());
+app.use(express.json({ limit: "50mb" }));
 
 app.get("/", (req, res, next) => {
   res.send("Api running");
+});
+app.post("/submit", (req, res) => {
+  if (req.body) {
+    console.log(req.body.name, req.body.level);
+    return res.status(201).send("Post Data Successfully !!");
+  }
+  return res.status(500).send("No Data Received !!");
 });
 
 // Connecting Routes

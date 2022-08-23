@@ -35,29 +35,16 @@ if ("serviceWorker" in navigator) {
 function submitFunction(event) {
   event.preventDefault();
   console.log("submitted", event);
-  let first_name = $("#firstname").val();
-  let last_name = $("#lastname").val();
-  let date_of_birth = $("#date_of_birth").val();
-  let address = $("#address").val();
-  let hobby = $("#hobby").val();
-  console.log(
-    "values,",
-    first_name,
-    middle_name,
-    last_name,
-    date_of_birth,
-    address,
-    hobby
-  );
+  let name = $("#name").val();
+  let image = $("#image").val();
+  let level = $("#level").val();
+  console.log("values,", name, image, level);
   $("#my_form").hide();
   // send  to server
   var data = {
-    first_name: first_name,
-    middle_name: middle_name,
-    last_name: last_name,
-    date_of_birth: date_of_birth,
-    address: address,
-    hobby: hobby,
+    name,
+    image,
+    level,
   };
   // send message to service worker via postMessage
   var msg = {
