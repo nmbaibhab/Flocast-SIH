@@ -23,6 +23,7 @@ app.post("/submit", (req, res) => {
 
 // Connecting Routes
 app.use("/govUser", require("./routes/auth"));
+app.use("/citizen", require("./routes/citizen"));
 // app.use("/api/private", require("./routes/private"));
 
 // Error Handler Middleware

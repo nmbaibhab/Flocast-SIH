@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
-const UserSchema = new mongoose.Schema({
+const GovUserSchema = new mongoose.Schema({
   username: {
     type: String,
     required: [true, "Please provide username"],
@@ -27,7 +27,7 @@ const UserSchema = new mongoose.Schema({
   resetPasswordExpire: Date,
 });
 
-UserSchema.pre("save", async function (next) {
+GovUserSchema.pre("save", async function (next) {
   if (!this.isModified("password")) {
     next();
   }
@@ -37,17 +37,17 @@ UserSchema.pre("save", async function (next) {
   next();
 });
 
-UserSchema.methods.matchPassword = async function (password) {
+GovUserSchema.methods.matchPassword = async function (password) {
   return await bcrypt.compare(password, this.password);
 };
 
-UserSchema.methods.getSignedJwtToken = function () {
+GovUserSchema.methods.getSignedJwtToken = function () {
   return jwt.sign({ id: this._id }, process.env.JWT_SECRET, {
     expiresIn: process.env.JWT_EXPIRE,
   });
 };
 
-UserSchema.methods.getResetPasswordToken = function () {
+GovUserSchema.methods.getResetPasswordToken = function () {
   const resetToken = crypto.randomBytes(20).toString("hex");
 
   // Hash token (private key) and save to database
@@ -62,6 +62,6 @@ UserSchema.methods.getResetPasswordToken = function () {
   return resetToken;
 };
 
-const User = mongoose.model("User", UserSchema);
+const GovUser = mongoose.model("GOVUSER", GovUserSchema);
 
-module.exports = User;
+module.exports = GovUser;
