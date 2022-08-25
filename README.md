@@ -13,4 +13,10 @@ Citizens of India face critical problems due to sudden and unexpected occurrence
 
 ## Application Workflow
 
+Stage 1
+
 ![alt text](https://github.com/nmbaibhab/Flocast-SIH/blob/main/Readme_Images/1_LP6FSBAFXBGQQc62ny76mg.png)
+
+Stage 2
+
+![alt text](https://github.com/nmbaibhab/Flocast-SIH/blob/main/Readme_Images/1_8V8GftAh_nI_gqHWRq8i7Q.png)
