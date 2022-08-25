@@ -5,6 +5,8 @@ import SendFloodMsgPage from './pages/SendFloodMsgPage';
 import DistLoginPage from './pages/DistLoginPage';
 import GovLoginPage from './pages/GovLoginPage';
 import GeoImageUploadPage from "./pages/GeoImageUploadPage";
+import HomePage from "./pages/HomePage";
+import FeedPage from "./pages/FeedPage";
 
 function App() {
   return (
@@ -15,9 +17,12 @@ function App() {
         <Route exact path="/distLogin" element={<DistLoginPage />}></Route>
         <Route exact path="/govLogin" element={<GovLoginPage />}></Route>
         <Route exact path="/imgUpload" element={<GeoImageUploadPage />}></Route>
+        <Route exact path="/home" element={<HomePage />}></Route>
+        <Route exact path="/feed" element={<FeedPage />}></Route>
         <Route
           path="*"
-          element={<Navigate to="/sendFloodMsg" replace />}
+          // element={<Navigate to="/feed" replace />}
+          element={<Navigate to="/home" replace />}
         />
       </Routes>
     </BrowserRouter>
