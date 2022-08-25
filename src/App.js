@@ -21,7 +21,6 @@ function App() {
         <Route exact path="/feed" element={<FeedPage />}></Route>
         <Route
           path="*"
-          // element={<Navigate to="/feed" replace />}
           element={<Navigate to="/home" replace />}
         />
       </Routes>

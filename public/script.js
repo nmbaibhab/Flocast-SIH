@@ -54,7 +54,7 @@ function submitFunction(event) {
 
   $.ajax({
     type: "POST",
-    url: "/submit",
+    url: "/image/upload",
     contentType: "application/json",
     data: JSON.stringify(data),
     success: function () {

@@ -95,7 +95,7 @@ export default function Example() {
 
               <div className=" absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                 <button className="invisible md:visible ml-6 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border bg-blue-700 border-transparent rounded-md shadow-sm text-sm text-white font-medium hover:bg-blue-800">
-                  <Link to="/distLogin">Dist Login</Link>
+                  <Link to="/imgUpload">Crowd Data</Link>
                 </button>
                 <button className="invisible md:visible ml-6 whitespace-nowrap inline-flex items-center justify-center px-4 py-2  border bg-green-500 border-transparent rounded-md shadow-sm text-sm text-white font-medium hover:bg-green-700">
                   <Link to="/govLogin">Gov Login</Link>

@@ -5,17 +5,16 @@ var IDB_VERSION = 1;
 var form_data;
 var urlsToCache = [
   "/",
+  "/imgUpload",
   "/manifest.json",
   "/favicon.ico",
   "/logo192.png",
   "/static/js/bundle.js",
   "static/js/main.e21e4b38.js",
   "/static/css/main.4d47b2c9.css",
-  "/imgUpload",
   "/script.js",
   "/sw.js",
   "https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js",
-  "https://tailwindui.com/img/logos/workflow-mark.svg?color=indigo&shade=500",
 ];
 
 self.addEventListener("install", function (event) {
