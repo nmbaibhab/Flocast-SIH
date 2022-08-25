@@ -1,70 +1,22 @@
-# Getting Started with Create React App
+# FloCast by Team Nexalus at SIH2022 Finals
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+FLOCAST is a NextGen web application developed by Team Nexalus that aims to serve as a solution for Two-way mobile communication (G2C and C2G) for the dissemination of flood forecasts to end-users with the collection of real-time data of inundation areas through crowd sourcing. The project is hosted under the problem statement of the Central Water Commission, Ministry of Jal Shakti, Department of Water Resources, RD & GR, Govt. of India.
 
-## Available Scripts
+FloCast will allow the user to create flood profiles through the automatic extraction of data from SAR or manual input data. Each flood profile will act as a Feed Thread to which crowdsourcing data can be added/modified. Direct communication i.e G2C & C2G is established by developing a feed interaction infrastructure between the Govt. bodies & citizens for verified flood profiles. We are integrating an Machine Learning model to the webapp using Tensorflow.js to verify the accuracy of the flood profiles. The messaging and direct information exchange is majorly set up using two mediums - Real Time Chat using Twilio PIM & Notification updates using Dynatrace.
 
-In the project directory, you can run:
 
-### `npm start`
+## Summary
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Citizens of India face critical problems due to sudden and unexpected occurrence of disaster which leads to loss of life and property. The solution we are building majorly focusses to build a communication channel medium between the govt. sources and end users. The product is scalable in terms of implementation as it can operate the functions in offline network connectivity medium. We are implementing ServiceWorker and IndexDB to persist the offline form of data from the affected flood regions with zero to very less internet connectivity. The product will remove the dependency of the end users on telecom service providers to some extent thus supporting the concept of Aatmanirbhar Bharat. The product also uses AWS SNS to send automated and scheduled message notification updates to the end users on the flood profile topics. Check out the LIVE DEMO here.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Application Workflow
 
-### `npm run build`
+Stage 1
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![alt text](https://github.com/nmbaibhab/Flocast-SIH/blob/main/Readme_Images/1_LP6FSBAFXBGQQc62ny76mg.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Stage 2
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![alt text](https://github.com/nmbaibhab/Flocast-SIH/blob/main/Readme_Images/1_8V8GftAh_nI_gqHWRq8i7Q.png)
