@@ -8,13 +8,14 @@ import GeoImageUploadPage from "./pages/GeoImageUploadPage";
 import HomePage from "./pages/HomePage";
 import InundationsPage from "./pages/InundationsPage";
 import DashboardPage from "./pages/DashboardPage";
+import PrivateRoute from "../src/controllers/PrivateRoute";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route exact path="/citizensUpload" element={<CitizensUploadPage />}></Route>
-        <Route exact path="/sendFloodMsg" element={<SendFloodMsgPage />}></Route>
+        <Route exact path="/sendFloodMsg" element={<PrivateRoute><SendFloodMsgPage /></PrivateRoute>}></Route>
         <Route exact path="/distLogin" element={<DistLoginPage />}></Route>
         <Route exact path="/govLogin" element={<GovLoginPage />}></Route>
         <Route exact path="/imgUpload" element={<GeoImageUploadPage />}></Route>

@@ -1,16 +1,21 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import GovtImage from "../../images/Govt.jpg";
 import axios from "axios";
 
 const GovLogin = () => {
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  const govProfile = localStorage.getItem("govProfile");
+  if (govProfile) navigate("/sendFloodMsg");
 
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
       .post(
-        "http://localhost:5000/govUser/login",
+        "http://localhost:8000/govUser/login",
         {
           email,
           password,
@@ -22,7 +27,9 @@ const GovLogin = () => {
         }
       )
       .then(function (response) {
-        console.log(response);
+        console.log(response.data);
+        navigate("/sendFloodMsg");
+        localStorage.setItem("govProfile", response.data);
       })
       .catch(function (error) {
         console.log(error);
