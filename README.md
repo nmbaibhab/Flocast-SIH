@@ -8,3 +8,9 @@ FloCast will allow the user to create flood profiles through the automatic extra
 ## Summary
 
 Citizens of India face critical problems due to sudden and unexpected occurrence of disaster which leads to loss of life and property. The solution we are building majorly focusses to build a communication channel medium between the govt. sources and end users. The product is scalable in terms of implementation as it can operate the functions in offline network connectivity medium. We are implementing ServiceWorker and IndexDB to persist the offline form of data from the affected flood regions with zero to very less internet connectivity. The product will remove the dependency of the end users on telecom service providers to some extent thus supporting the concept of Aatmanirbhar Bharat. The product also uses AWS SNS to send automated and scheduled message notification updates to the end users on the flood profile topics. Check out the LIVE DEMO here.
+
+
+
+## Application Workflow
+
+![alt text](https://github.com/nmbaibhab/Flocast-SIH/blob/main/Readme_Images/1_LP6FSBAFXBGQQc62ny76mg.png)
