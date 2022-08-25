@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import GovtImage from "../../images/Govt.jpg";
 import axios from "axios";
+import Swal from 'sweetalert2'
 
 const GovLogin = () => {
   const [email, setEmail] = useState("");
@@ -23,6 +24,14 @@ const GovLogin = () => {
       )
       .then(function (response) {
         console.log(response);
+        if (response.data.success)
+        Swal.fire({
+          position: 'top-end',
+          icon: 'success',
+          title: 'Your work has been saved',
+          showConfirmButton: false,
+          timer: 1500
+        })
       })
       .catch(function (error) {
         console.log(error);

@@ -5,8 +5,9 @@ import SendFloodMsgPage from './pages/SendFloodMsgPage';
 import DistLoginPage from './pages/DistLoginPage';
 import GovLoginPage from './pages/GovLoginPage';
 import GeoImageUploadPage from "./pages/GeoImageUploadPage";
-import HomePage from "./pages/HomePage";
 import FeedPage from "./pages/FeedPage";
+import HomePage from "./pages/HomePage"
+import Rescue from "./pages/RescueDetails";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route exact path="/imgUpload" element={<GeoImageUploadPage />}></Route>
         <Route exact path="/home" element={<HomePage />}></Route>
         <Route exact path="/feed" element={<FeedPage />}></Route>
+        <Route exact path="/rescue" element={<Rescue />}></Route>
         <Route
           path="*"
           // element={<Navigate to="/feed" replace />}

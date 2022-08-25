@@ -2,111 +2,43 @@ import React from "react";
 
 const Home = () => {
     return (
-        <>  
-            <img src="https://harghartiranga.com/" alt="" srcset="" />
-            <div className="flex flex-col items-center mt-10 space-y-6 p-9">
-                <div className="header text-xl font-bold">Know your Regional Status</div>
-                <form className="w-full max-w-lg mx-auto">
-                    <div class="flex flex-row space-x-6 mb-2">
-                        <div class="w-full md:w-2/3 mb-6 md:mb-0">
-                            <label
-                                class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                                for="grid-state"
-                            >
-                                State
-                            </label>
-                            <div class="relative">
-                                <select
-                                    class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                                    id="grid-state"
-                                >
-                                    <option selected>Select Your State</option>
-                                    <option>Odisha </option>
-                                    <option>Kelara</option>
-                                    <option>Uttarkhand</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="w-full md:w-2/3 mb-6 md:mb-0">
-                            <label
-                                class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                                for="grid-state"
-                            >
-                                Region
-                            </label>
-                            <div class="relative">
-                                <select
-                                    class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                                    id="grid-state"
-                                >
-                                    <option selected>Select Your Region</option>
-                                    <option>Region1 </option>
-                                    <option>Region2</option>
-                                    <option>Region3</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="w-full md:w-2/3 mb-6 md:mb-0">
-                            <label
-                                class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                                for="grid-state"
-                            >
-                                District
-                            </label>
-                            <div class="relative">
-                                <input
-                                    class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-                                    id="dist"
-                                    type="text"
-                                    placeholder="District"
-                                />
-                            </div>
-                        </div>
+        <>
+
+
+            <div id="animation-carousel" className="relative" data-carousel="static">
+                <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
+                    
+                    <div className="hidden duration-200 ease-linear absolute inset-0 transition-all transform" data-carousel-item="">
+                        <img src="/docs/images/carousel/carousel-1.svg" className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
                     </div>
-                    {/* <div class="flex flex-wrap mb-2">
-                        <div class="w-full md:w-2/3 mb-6 md:mb-0">
-                            <label
-                                class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                                for="grid-city"
-                            >
-                                City
-                            </label>
-                            <div class="relative">
-                                <input
-                                    class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-                                    id="pin"
-                                    type="text"
-                                    placeholder="city"
-                                />
-                            </div>
-                        </div>
-                        <div class="w-full md:w-2/3 mb-6 md:mb-0">
-                            <label
-                                class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                                for="grid-state"
-                            >
-                                Region
-                            </label>
-                            <div class="relative">
-                                <input
-                                    class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-                                    id="pin"
-                                    type="number"
-                                    placeholder="Pin No"
-                                />
-                            </div>
-                        </div>
-                    </div> */}
-                </form>
-                <div className="">
-                    <button
-                        className="bg-indigo-700 text-white font-semibold px-4 py-2 rounded-lg hover:bg-indigo-800"
-                        type="submit"
-                    >
-                        Submit
-                    </button>
+                    <div className="duration-200 ease-linear absolute inset-0 transition-all transform -translate-x-full z-10" data-carousel-item="">
+                        <img src="/docs/images/carousel/carousel-2.svg" className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
+                    </div>
+                    <div className="duration-200 ease-linear absolute inset-0 transition-all transform translate-x-0 z-20" data-carousel-item="active">
+                        <img src="/docs/images/carousel/carousel-3.svg" className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
+                    </div>
+                    <div className="duration-200 ease-linear absolute inset-0 transition-all transform translate-x-full z-10" data-carousel-item="">
+                        <img src="/docs/images/carousel/carousel-4.svg" className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
+                    </div>
+                    <div className="hidden duration-200 ease-linear absolute inset-0 transition-all transform" data-carousel-item="">
+                        <img src="/docs/images/carousel/carousel-5.svg" className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
+                    </div>
                 </div>
+                <button type="button" className="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev="">
+                    <span className="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                        <svg aria-hidden="true" className="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                        <span className="sr-only">Previous</span>
+                    </span>
+                </button>
+                <button type="button" className="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next="">
+                    <span className="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                        <svg aria-hidden="true" className="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        <span className="sr-only">Next</span>
+                    </span>
+                </button>
             </div>
+
+
         </>
     );
 };
