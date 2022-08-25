@@ -2,11 +2,12 @@ import React from "react";
 
 const Home = () => {
     return (
-        <>
+        <>  
+            <img src="https://harghartiranga.com/" alt="" srcset="" />
             <div className="flex flex-col items-center mt-10 space-y-6 p-9">
-                <div className="header text-2xl font-bold">Know your Regional Status</div>
+                <div className="header text-xl font-bold">Know your Regional Status</div>
                 <form className="w-full max-w-lg mx-auto">
-                    <div class="flex flex-wrap mb-2">
+                    <div class="flex flex-row space-x-6 mb-2">
                         <div class="w-full md:w-2/3 mb-6 md:mb-0">
                             <label
                                 class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
@@ -45,8 +46,24 @@ const Home = () => {
                                 </select>
                             </div>
                         </div>
+                        <div class="w-full md:w-2/3 mb-6 md:mb-0">
+                            <label
+                                class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                                for="grid-state"
+                            >
+                                District
+                            </label>
+                            <div class="relative">
+                                <input
+                                    class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                                    id="dist"
+                                    type="text"
+                                    placeholder="District"
+                                />
+                            </div>
+                        </div>
                     </div>
-                    <div class="flex flex-wrap mb-2">
+                    {/* <div class="flex flex-wrap mb-2">
                         <div class="w-full md:w-2/3 mb-6 md:mb-0">
                             <label
                                 class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
@@ -79,7 +96,7 @@ const Home = () => {
                                 />
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                 </form>
                 <div className="">
                     <button
