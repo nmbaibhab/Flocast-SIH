@@ -8,6 +8,9 @@ const GovLogin = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  const govProfile = localStorage.getItem("govProfile");
+  if (govProfile) navigate("/sendFloodMsg");
+
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
