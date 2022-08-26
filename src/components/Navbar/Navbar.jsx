@@ -43,6 +43,7 @@ export default function Example() {
   const govProfile = localStorage.getItem("govProfile");
   const logout = () => {
     localStorage.removeItem("govProfile");
+    localStorage.removeItem("userProfile");
     navigate("/home");
   };
 
