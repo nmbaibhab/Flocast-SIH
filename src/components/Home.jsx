@@ -15,13 +15,27 @@ const Home = () => {
               <br className="hidden lg:inline-block" />
             </h1>
             <p className="mb-8 leading-relaxed">
-            FLOCAST is a NextGen web application developed by Team Nexalus that aims to serve as a solution for Two-way mobile communication (G2C and C2G) for the dissemination of flood forecasts to end-users with the collection of real-time data of inundation areas through crowd sourcing. The project is hosted under the problem statement of the Central Water Commission, Ministry of Jal Shakti, Department of Water Resources, RD and GR, Govt. of India.{" "}
+              FLOCAST is a NextGen web application developed by Team Nexalus
+              that aims to serve as a solution for Two-way mobile communication
+              (G2C and C2G) for the dissemination of flood forecasts to
+              end-users with the collection of real-time data of inundation
+              areas through crowd sourcing. The project is hosted under the
+              problem statement of the Central Water Commission, Ministry of Jal
+              Shakti, Department of Water Resources, RD and GR, Govt. of India.{" "}
             </p>
             <div className="flex justify-center">
               <Link to="/inundations">
                 <button className="inline-flex text-white bg-blue-600 border-0 py-2 px-6 focus:outline-none hover:bg-blue-800 rounded-full text-lg font-semibold">
                   {" "}
                   Your Inundation Status
+                </button>
+              </Link>
+            </div>
+            <div className="flex justify-center mt-4">
+              <Link to="/imgUpload">
+                <button className="inline-flex text-white bg-green-600 border-0 py-2 px-6 focus:outline-none hover:bg-blue-800 rounded-full text-lg font-semibold">
+                  {" "}
+                  Crowdsource Data
                 </button>
               </Link>
             </div>
@@ -37,21 +51,9 @@ const Home = () => {
       </section>
       <div className="h-110 sm:h-64 xl:h-80 2xl:h-110 mt-1">
         <Carousel>
-          <img
-            src={Image1}
-            style={{height:"100%"}}
-            alt="..."
-          />
-          <img
-            src={Image2}
-            style={{height:"100%"}}
-            alt="..."
-          />
-          <img
-            src={Image1}
-            style={{height:"100%"}}
-            alt="..."
-          />
+          <img src={Image1} style={{ height: "100%" }} alt="..." />
+          <img src={Image2} style={{ height: "100%" }} alt="..." />
+          <img src={Image1} style={{ height: "100%" }} alt="..." />
         </Carousel>
       </div>
     </>

@@ -10,6 +10,9 @@ const GovLogin = () => {
   const [password, setPassword] = useState("");
 
   const govProfile = localStorage.getItem("govProfile");
+  if (localStorage.getItem("userProfile")) {
+    localStorage.removeItem("userProfile");
+  }
   if (govProfile) navigate("/sendFloodMsg");
 
   const handleSubmit = (e) => {

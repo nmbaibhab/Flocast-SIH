@@ -9,6 +9,12 @@ import { GiFlood, GiWaterRecycling } from "react-icons/gi";
 
 const navigation = [
   {
+    name: "Contribute Images",
+    href: "/imgUpload",
+    current: false,
+    icon: GiWaterRecycling,
+  },
+  {
     name: "Live Flood Forecasts",
     href: "https://ffs.tamcnhp.com/",
     current: false,
@@ -85,7 +91,7 @@ export default function Example() {
                           item.current
                             ? "bg-gray-900 text-white"
                             : "text-gray-200 hover:bg-gray-700 hover:text-white",
-                          "px-3 py-2 rounded-md text-sm font-medium"
+                          "px-2 py-2 rounded-md text-sm font-medium"
                         )}
                         aria-current={item.current ? "page" : undefined}
                       >
@@ -101,8 +107,8 @@ export default function Example() {
               </div>
 
               <div className=" absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                <button className="invisible md:visible ml-6 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border bg-blue-700 border-transparent rounded-md shadow-sm text-sm text-white font-medium hover:bg-blue-800">
-                  <Link to="/imgUpload">Contribute Crowd Data</Link>
+                <button className="invisible md:visible ml-6 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border bg-blue-700 border-transparent rounded-md shadow-sm text-sm text-white font-medium hover:bg-pink-800">
+                  <Link to="/userLogin">UserLogin</Link>
                 </button>
                 {govProfile ? (
                   <button
@@ -112,12 +118,9 @@ export default function Example() {
                     Logout
                   </button>
                 ) : (
-                  <a
-                    href="/govLogin"
-                    className="invisible md:visible ml-6 whitespace-nowrap inline-flex items-center justify-center px-4 py-2  border bg-green-500 border-transparent rounded-md shadow-sm text-sm text-white font-medium hover:bg-green-700"
-                  >
-                    Gov Login
-                  </a>
+                  <button className="invisible md:visible ml-6 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border bg-green-600 border-transparent rounded-md shadow-sm text-sm text-white font-medium hover:bg-pink-800">
+                    <Link to="/govLogin">Gov Login</Link>
+                  </button>
                 )}
               </div>
             </div>
@@ -157,6 +160,9 @@ export default function Example() {
                   <Link to="/govLogin">Gov Login</Link>
                 </button>
               )}
+              <button className=" mx-1 whitespace-nowrap inline-flex items-center justify-center px-2 py-2  border bg-blue-500 border-transparent rounded-md shadow-sm text-sm text-white font-sm hover:bg-pink-500">
+                <Link to="/userLogin">User Login</Link>
+              </button>
             </div>
           </Disclosure.Panel>
         </>
