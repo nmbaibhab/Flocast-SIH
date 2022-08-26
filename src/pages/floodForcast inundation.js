@@ -46,7 +46,6 @@ export default function FloodForcastInundation() {
   const mapContainer = useRef(null);
   const [lat, setLat] = useState(null);
   const [long, setLong] = useState(null);
-  const [mapReady, setMapReady] = useState(null);
   const [mapCenter, setMapCenter] = useState([-68.137343, 45.137451]);
   //   const [areaPins, setAreaPins] = useState([]);
   const [mapObject, setMap] = useState();
@@ -56,7 +55,7 @@ export default function FloodForcastInundation() {
       container: mapContainer.current,
       style: "mapbox://styles/mapbox/streets-v11",
       center: [-68.137343, 45.137451],
-      zoom: 12,
+      zoom: 5,
     });
     try {
       map.addControl(new mapboxgl.FullscreenControl());
@@ -68,7 +67,7 @@ export default function FloodForcastInundation() {
 
   useEffect(() => {
     if (mapObject) {
-      mapObject.setCenter(mapCenter).setZoom(10);
+      mapObject.setCenter(mapCenter).setZoom(5);
     }
 
     // // eslint-disable-next-line no-restricted-syntax
