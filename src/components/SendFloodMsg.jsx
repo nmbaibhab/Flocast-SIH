@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
-import indiaFlag from "../images/India.jpg";
+import Swal from "sweetalert2";
+// import indiaFlag from "../images/India.jpg";
 
 const SendFloodMsg = () => {
   const [stateName, setStateName] = useState("");
@@ -21,8 +22,20 @@ const SendFloodMsg = () => {
     try {
       axios
         .post("http://localhost:8000/sms/send", data, { headers })
-        .then((response) => console.log(response));
+        .then((response) => {
+          Swal.fire({
+            icon: "success",
+            title: "Successful",
+            text: "SMS sent Successful ",
+          });
+          console.log(response);
+        });
     } catch (error) {
+      Swal.fire({
+        icon: "error",
+        title: "Some error happend",
+        text: "failed to send sms ",
+      });
       console.log(error);
     }
   };
