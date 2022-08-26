@@ -28,9 +28,15 @@ const GovLogin = () => {
         }
       )
       .then(function (response) {
-        console.log(response.data);
-        navigate("/sendFloodMsg");
-        localStorage.setItem("govProfile", response.data);
+        console.log(response);
+        if (response.data.success)
+        Swal.fire({
+          position: 'top-end',
+          icon: 'success',
+          title: 'Your work has been saved',
+          showConfirmButton: false,
+          timer: 1500
+        })
       })
       .catch(function (error) {
         console.log(error);

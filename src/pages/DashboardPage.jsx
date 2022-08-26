@@ -1,9 +1,9 @@
 import React from "react";
-import Dashboard from "../components/Dashboard";
+import DashBoard from "../components/DashBoard";
 const DashboardPage = () => {
   return (
     <div>
-      <Dashboard />
+      <DashBoard />
     </div>
   );
 };
