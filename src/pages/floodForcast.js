@@ -197,14 +197,16 @@ export default function FloodForcast() {
   }, [mapObject]);
 
   return (
-    <section id="map" style={{ marginTop: 8, width: "50%" }}>
-      <div className="container mx-auto">
-        <div className="map_and_form">
-          <div className="iframe">
-            <div ref={mapContainer} style={{ height: "80vh" }} />
+    <>
+      <section id="map" style={{ marginTop: 8, width: "50%" }}>
+        <div className="container mx-auto">
+          <div className="map_and_form">
+            <div className="iframe">
+              <div ref={mapContainer} style={{ height: "80vh" }} />
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }

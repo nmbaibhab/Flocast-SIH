@@ -77,7 +77,7 @@ export default class DistLogin extends React.Component {
           .then(function (response) {
             console.log(response.data);
             navigate("/sendFloodMsg");
-            localStorage.setItem("govProfile", response.data);
+            localStorage.setItem("userProfile", response.data);
           })
           .catch(function (error) {
             console.log(error);
