@@ -106,15 +106,18 @@ export default function Example() {
                 </button>
                 {govProfile ? (
                   <button
-                    className="invisible md:visible ml-6 whitespace-nowrap inline-flex items-center justify-center px-2 py-1  border bg-gray-500 border-transparent rounded-md shadow-sm text-sm text-white font-sm hover:bg-red-600"
+                    className="invisible md:visible ml-6 whitespace-nowrap inline-flex items-center justify-center px-4 py-2  border bg-gray-500 border-transparent rounded-md shadow-sm text-sm text-white font-medium hover:bg-red-700"
                     onClick={logout}
                   >
                     Logout
                   </button>
                 ) : (
-                  <button className="invisible md:visible ml-6 whitespace-nowrap inline-flex items-center justify-center px-4 py-2  border bg-green-500 border-transparent rounded-md shadow-sm text-sm text-white font-medium hover:bg-green-700">
-                    <Link to="/govLogin">Gov Login</Link>
-                  </button>
+                  <a
+                    href="/govLogin"
+                    className="invisible md:visible ml-6 whitespace-nowrap inline-flex items-center justify-center px-4 py-2  border bg-green-500 border-transparent rounded-md shadow-sm text-sm text-white font-medium hover:bg-green-700"
+                  >
+                    Gov Login
+                  </a>
                 )}
               </div>
             </div>

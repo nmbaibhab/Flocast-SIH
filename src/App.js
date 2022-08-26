@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import CitizensUploadPage from "./pages/CitizensUploadPage";
 import SendFloodMsgPage from "./pages/SendFloodMsgPage";
-import DistLoginPage from "./pages/DistLoginPage";
+import UserLoginPage from "./pages/UserLoginPage";
 import GovLoginPage from "./pages/GovLoginPage";
 import GeoImageUploadPage from "./pages/GeoImageUploadPage";
 import HomePage from "./pages/HomePage";
@@ -29,7 +29,7 @@ function App() {
             </PrivateRoute>
           }
         ></Route>
-        <Route exact path="/distLogin" element={<DistLoginPage />}></Route>
+        <Route exact path="/userLogin" element={<UserLoginPage />}></Route>
         <Route exact path="/govLogin" element={<GovLoginPage />}></Route>
         <Route exact path="/imgUpload" element={<GeoImageUploadPage />}></Route>
         <Route exact path="/home" element={<HomePage />}></Route>

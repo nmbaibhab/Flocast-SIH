@@ -1,12 +1,12 @@
 import React from "react";
-import DistLogin from "../components/Auth/DistLogin";
+import UserLogin from "../components/Auth/UserLogin";
 import Navbar from "../components/Navbar/Navbar";
 
 const DistLoginPage = () => {
   return (
     <div>
       <Navbar />
-      <DistLogin />
+      <UserLogin />
     </div>
   );
 };
