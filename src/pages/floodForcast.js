@@ -102,7 +102,6 @@ export default function FloodForcast() {
   const mapContainer = useRef(null);
   const [lat, setLat] = useState(null);
   const [long, setLong] = useState(null);
-  const [mapReady, setMapReady] = useState(null);
   const [mapCenter, setMapCenter] = useState([72.877426, 19.07609]);
   //   const [areaPins, setAreaPins] = useState([]);
   const [mapObject, setMap] = useState();
