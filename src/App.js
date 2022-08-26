@@ -12,7 +12,11 @@ import FloodForcast from "./pages/floodForcast";
 import PrivateRoute from "../src/controllers/PrivateRoute";
 import ChatBot from "react-simple-chatbot";
 import { ThemeProvider } from "styled-components";
-import FloodForcastInundation from "./pages/floodForcast inundation";
+import DashboardAI from "./pages/DashboardAI";
+import DashboardHome from "./pages/DashboardHome";
+import DashboardForecasts from "./pages/DashboardForecasts";
+import DashboardMessages from "./pages/DashboardMessages";
+import DashboardRescue from "./pages/DashboardRescue";
 
 const steps = [
   {
@@ -107,14 +111,37 @@ function App() {
             path="/inundations"
             element={<InundationsPage />}
           ></Route>
-          <Route exact path="/dashboard" element={<DashBoard />}></Route>
-          <Route exact path="/floodForcast" element={<FloodForcast />}></Route>
           <Route
             exact
-            path="/floodForcastInundation"
-            element={<FloodForcastInundation />}
+            path="/dashboard/aiModel"
+            element={<DashboardAI />}
           ></Route>
+          <Route
+            exact
+            path="/dashboard/home"
+            element={<DashboardHome />}
+          ></Route>
+          <Route
+            exact
+            path="/dashboard/forecast"
+            element={<DashboardForecasts />}
+          ></Route>
+          <Route
+            exact
+            path="/dashboard/messages"
+            element={<DashboardMessages />}
+          ></Route>
+          <Route
+            exact
+            path="/dashboard/rescue"
+            element={<DashboardRescue />}
+          ></Route>
+          <Route exact path="/floodForcast" element={<FloodForcast />}></Route>
           <Route path="*" element={<Navigate to="/home" replace />} />
+          <Route
+            path="/dashboard"
+            element={<Navigate to="/dashboard/home" replace />}
+          />
         </Routes>
       </BrowserRouter>
       <div className="App">
