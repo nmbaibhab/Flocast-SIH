@@ -7,7 +7,7 @@ import GovLoginPage from "./pages/GovLoginPage";
 import GeoImageUploadPage from "./pages/GeoImageUploadPage";
 import HomePage from "./pages/HomePage";
 import InundationsPage from "./pages/InundationsPage";
-import DashboardPage from "./pages/DashboardPage";
+import DashBoard from "./pages/DashBoard";
 import FloodForcast from "./pages/floodForcast";
 import PrivateRoute from "../src/controllers/PrivateRoute";
 
@@ -34,7 +34,7 @@ function App() {
         <Route exact path="/imgUpload" element={<GeoImageUploadPage />}></Route>
         <Route exact path="/home" element={<HomePage />}></Route>
         <Route exact path="/inundations" element={<InundationsPage />}></Route>
-        <Route exact path="/dashboard" element={<DashboardPage />}></Route>
+        <Route exact path="/dashboard" element={<DashBoard />}></Route>
         <Route exact path="/floodForcast" element={<FloodForcast />}></Route>
         <Route path="*" element={<Navigate to="/home" replace />} />
       </Routes>

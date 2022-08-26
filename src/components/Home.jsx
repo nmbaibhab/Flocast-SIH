@@ -36,15 +36,15 @@ const Home = () => {
       <div className="h-96 sm:h-64 xl:h-80 2xl:h-96 mt-1">
         <Carousel>
           <img
-            src="https://flowbite.com/docs/images/carousel/carousel-1.svg"
+            src="./images/sliderbannerM30.jpg"
             alt="..."
           />
           <img
-            src="https://flowbite.com/docs/images/carousel/carousel-2.svg"
+            src="./images/sliderbannerM32.jpg"
             alt="..."
           />
           <img
-            src="https://flowbite.com/docs/images/carousel/carousel-3.svg"
+            src="./images/sliderbannerM30.jpg"
             alt="..."
           />
         </Carousel>
