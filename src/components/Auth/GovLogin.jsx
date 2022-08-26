@@ -12,32 +12,8 @@ const GovLogin = () => {
   const govProfile = localStorage.getItem("govProfile");
   if (govProfile) navigate("/sendFloodMsg");
 
-  const validEmailRegex = RegExp(
-    /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
-  );
-  const validateForm = (errors) => {
-    let valid = true;
-    Object.values(errors).forEach((val) => val.length > 0 && (valid = false));
-    return valid;
-  };
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const { name, value } = event.target;
-    let errors = this.state.errors;
-    switch (name) {
-      case "email":
-        errors.email = validEmailRegex.test(value) ? "" : "Email is not valid!";
-        break;
-      case "password":
-        errors.password =
-          value.length < 8
-            ? "Password must be at least 8 characters long!"
-            : "";
-        break;
-      default:
-        break;
-    }
+  const handleSubmit = (e) => {
+    e.preventDefault();
     axios
       .post(
         "http://localhost:8000/govUser/login",
@@ -51,12 +27,12 @@ const GovLogin = () => {
           },
         }
       )
-      .then(function (response) {
+      .then(function(response) {
         console.log(response.data);
-        localStorage.setItem("govProfile", response.data);
         navigate("/sendFloodMsg");
+        localStorage.setItem("govProfile", response.data);
       })
-      .catch(function (error) {
+      .catch(function(error) {
         console.log(error);
         Swal.fire({
           icon: "error",
