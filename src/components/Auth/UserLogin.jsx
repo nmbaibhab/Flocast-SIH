@@ -32,8 +32,8 @@ const GovLogin = () => {
       )
       .then(function(response) {
         console.log(response.data);
-        navigate("/sendFloodMsg");
-        localStorage.setItem("govProfile", response.data);
+        navigate("/dashboard");
+        localStorage.setItem("userProfile", response.data);
       })
       .catch(function(error) {
         console.log(error);
