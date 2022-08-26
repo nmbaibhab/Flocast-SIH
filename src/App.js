@@ -8,6 +8,7 @@ import GeoImageUploadPage from "./pages/GeoImageUploadPage";
 import FeedPage from "./pages/FeedPage";
 import HomePage from "./pages/HomePage"
 import Rescue from "./pages/RescueDetails";
+import DashBoard from "./pages/DashBoard";
 
 function App() {
   return (
@@ -18,13 +19,14 @@ function App() {
         <Route exact path="/distLogin" element={<DistLoginPage />}></Route>
         <Route exact path="/govLogin" element={<GovLoginPage />}></Route>
         <Route exact path="/imgUpload" element={<GeoImageUploadPage />}></Route>
-        <Route exact path="/home" element={<HomePage />}></Route>
+        {/* <Route exact path="/home" element={<HomePage />}></Route> */}
         <Route exact path="/feed" element={<FeedPage />}></Route>
         <Route exact path="/rescue" element={<Rescue />}></Route>
+        <Route exact path="/dashboard" element={<DashBoard />}></Route>
         <Route
           path="*"
           // element={<Navigate to="/feed" replace />}
-          element={<Navigate to="/home" replace />}
+          element={<Navigate to="/dashboard" replace />}
         />
       </Routes>
     </BrowserRouter>
