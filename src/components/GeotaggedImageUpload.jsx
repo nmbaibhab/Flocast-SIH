@@ -3,7 +3,7 @@ import axios from "axios";
 import Camera, { FACING_MODES, IMAGE_TYPES } from "react-html5-camera-photo";
 // import ImagePreview from "./ImagePreview";
 import { TbCameraRotate } from "react-icons/tb";
-
+import Swal from "sweetalert2";
 import "react-html5-camera-photo/build/css/index.css";
 
 const GeotaggedImageUpload = () => {
@@ -86,10 +86,22 @@ const GeotaggedImageUpload = () => {
       };
       try {
         axios
-          .post("http://localhost:5000/image/upload", data, { headers })
-          .then((response) => console.log(response));
+          .post("http://localhost:8000/image/upload", data, { headers })
+          .then((response) => {
+            console.log(response);
+            Swal.fire({
+              icon: "success",
+              title: "Successful",
+              text: "Data Upload Successful ",
+            });
+          });
       } catch (error) {
         console.log(error);
+        Swal.fire({
+          icon: "error",
+          title: "Failed",
+          text: "Please verify the data ",
+        });
       }
     }
   };

@@ -9,8 +9,8 @@ import { GiFlood, GiWaterRecycling } from "react-icons/gi";
 
 const navigation = [
   {
-    name: "Live Flood Forecast",
-    href: "http://ffs.tamcnhp.com/",
+    name: "Live Flood Forecasts",
+    href: "https://ffs.tamcnhp.com/",
     current: false,
     icon: GiFlood,
   },
@@ -102,7 +102,7 @@ export default function Example() {
 
               <div className=" absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                 <button className="invisible md:visible ml-6 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border bg-blue-700 border-transparent rounded-md shadow-sm text-sm text-white font-medium hover:bg-blue-800">
-                  <Link to="/imgUpload">Crowd Data</Link>
+                  <Link to="/imgUpload">Contribute Crowd Data</Link>
                 </button>
                 {govProfile ? (
                   <button
