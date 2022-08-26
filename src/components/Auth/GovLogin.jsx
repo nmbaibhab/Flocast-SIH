@@ -33,7 +33,7 @@ const GovLogin = () => {
       .then(function(response) {
         console.log(response.data);
         navigate("/sendFloodMsg");
-        localStorage.setItem("govProfile", response.data);
+        localStorage.setItem("govProfile", response.data.token);
       })
       .catch(function(error) {
         console.log(error);

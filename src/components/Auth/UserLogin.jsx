@@ -33,7 +33,7 @@ const GovLogin = () => {
       .then(function(response) {
         console.log(response.data);
         navigate("/dashboard");
-        localStorage.setItem("userProfile", response.data);
+        localStorage.setItem("userProfile", response.data.token);
       })
       .catch(function(error) {
         console.log(error);
