@@ -15,6 +15,7 @@ import { ThemeProvider } from "styled-components";
 import DashboardAI from "./pages/DashboardAI";
 import DashboardHome from "./pages/DashboardHome";
 import DashboardForecasts from "./pages/DashboardForecasts";
+import FloodForcastInundation from "./pages/floodForcastInundation";
 import DashboardMessages from "./pages/DashboardMessages";
 import DashboardRescue from "./pages/DashboardRescue";
 
@@ -137,7 +138,8 @@ function App() {
             element={<DashboardRescue />}
           ></Route>
           <Route exact path="/floodForcast" element={<FloodForcast />}></Route>
-          <Route path="*" element={<Navigate to="/home" replace />} />
+          <Route exact path="/floodForcastInundation" element={<FloodForcastInundation />}></Route>
+          {/* <Route path="*" element={<Navigate to="/home" replace />} /> */}
           <Route
             path="/dashboard"
             element={<Navigate to="/dashboard/home" replace />}
