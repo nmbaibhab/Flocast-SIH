@@ -139,7 +139,7 @@ function App() {
           ></Route>
           <Route exact path="/floodForcast" element={<FloodForcast />}></Route>
           <Route exact path="/floodForcastInundation" element={<FloodForcastInundation />}></Route>
-          {/* <Route path="*" element={<Navigate to="/home" replace />} /> */}
+          <Route path="*" element={<Navigate to="/home" replace />} />
           <Route
             path="/dashboard"
             element={<Navigate to="/dashboard/home" replace />}
